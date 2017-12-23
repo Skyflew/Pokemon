@@ -1,0 +1,6 @@
+<mat-nav-list>
+  <mat-list-item class="pokemon" *ngFor="let pokemon of pokemons" routerLink="/detail/{{utilService.getIdFromUrl(pokemon.url)}}">
+      <img matListAvatar src="/assets/img/sprites/{{utilService.getIdFromUrl(pokemon.url)}}.png" alt="...">
+      <h3 matLine> {{utilService.getIdFromUrl(pokemon.url)}}. {{pokemon.name | titlecase}} </h3>
+  </mat-list-item>
+</mat-nav-list>
